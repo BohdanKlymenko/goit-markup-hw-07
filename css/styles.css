@@ -143,6 +143,7 @@ img {
 .menu__link--active {
   color: var(--accent-color);
 }
+
 .menu {
   display: inline-flex;
   font-weight: 500;
@@ -202,9 +203,10 @@ img {
 .contacts__icon--start {
   margin-right: 10px;
 }
+
 /* hero section  */
 
-.btn-hero {
+.btn {
   display: block;
   margin-right: auto;
   margin-left: auto;
@@ -216,9 +218,12 @@ img {
   font-weight: bold;
   font-size: 16px;
   line-height: 1.87;
+  border: none;
+  border-radius: 4px;
   letter-spacing: 0.06em;
   background-color: var(--accent-color);
   color: var(--alt-text-color);
+  cursor: pointer;
 }
 
 .hero {
@@ -395,11 +400,11 @@ img {
   display: inline-flex;
 }
 
-.social-icons-svg {
+.social-icons__svg {
   fill: var(--icons-color);
 }
 
-.social-icons-link {
+.social-icons__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -413,17 +418,17 @@ img {
   transition-delay: 0;
 }
 
-.social-icons-link:hover .social-icons-svg,
-.social-icons-link:focus .social-icons-svg {
+.social-icons__link:hover .social-icons__svg,
+.social-icons__link:focus .social-icons__svg {
   fill: var(--alt-text-color);
 }
 
-.social-icons-link:hover,
-.social-icons-link:focus {
+.social-icons__link:hover,
+.social-icons__link:focus {
   background-color: var(--accent-color);
 }
 
-.social-icons-item:not(:last-child) {
+.social-icons__item:not(:last-child) {
   margin-right: 10px;
 }
 
@@ -460,6 +465,7 @@ img {
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
 }
+
 .filter__btn:hover,
 .filter__btn:focus {
   background-color: var(--accent-color);
@@ -546,11 +552,13 @@ img {
   line-height: 1.87;
   color: var(--main-text-color);
 }
+
 .card-set__info {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
   border-top: none;
 }
+/* ///////////////////// */
 
 .title-clients {
   font-size: 36px;
@@ -610,28 +618,34 @@ img {
   background-color: var(--dark-bg);
 }
 
-.footer-section {
+.bottom-panel {
   display: flex;
   align-items: baseline;
 }
 
 .address-section {
   max-width: 270px;
+}
+.footer__address-section {
   margin-right: 70px;
 }
+
 .address {
-  margin-top: 20px;
   font-size: 14px;
   font-style: normal;
   line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
 }
 
-.address-item:not(:last-child) {
+.footer__address {
+  margin-top: 20px;
+}
+
+.address__item:not(:last-child) {
   margin-bottom: 9px;
 }
 
-.map {
+.address--map {
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
@@ -640,10 +654,13 @@ img {
 
 .social-icons-section {
   max-width: 208px;
+}
+
+.footer__social-icons-section {
   margin-right: auto;
 }
 
-.social-icon-title {
+.social-icons--title {
   margin-bottom: 20px;
   font-size: 14px;
   line-height: 1.14;
@@ -652,14 +669,15 @@ img {
   color: var(--alt-title-color);
 }
 
-.svg-footer {
+.social-icons__svg--fill {
   fill: var(--alt-icon-color);
 }
-.social-icons-link-footer {
+
+.social-icons__link--bgc {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.form-footer__title {
+.footer-form__title {
   margin-bottom: 20px;
   font-weight: bold;
   font-size: 14px;
@@ -668,10 +686,10 @@ img {
   color: var(--alt-title-color);
 }
 
-.form-footer__field {
+.footer-form__field {
   display: flex;
 }
-.form-footer__input {
+.footer-form__input {
   width: 358px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -685,10 +703,25 @@ img {
   margin-right: 12px;
 }
 
-.form-footer__input::placeholder {
+.footer-form__input::placeholder {
   font-size: 16px;
   line-height: 1.25;
   color: rgba(255, 255, 255, 0.6);
+}
+
+.btn--positioning {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.btn__icon {
+  position: absolute;
+  top: 50%;
+  right: 28px;
+  transform: translateY(-50%);
+  fill: var(--alt-icon-color);
 }
 
 /* modal section */
@@ -704,17 +737,17 @@ img {
   transition: opacity 250ms var(--timing-function);
 }
 
-.backdrop.is-hidden {
+.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
 
-.backdrop.is-hidden .modal {
+.is-hidden .modal {
   transform: translate(-50%, -50%) scale(1.2);
 }
 
-.modal-close-btn {
+.modal__close-btn {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -729,13 +762,13 @@ img {
   cursor: pointer;
 }
 
-.modal-close-svg {
+.modal__close-svg {
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
 }
-.modal-close-btn:hover .modal-close-svg,
-.modal-close-btn:focus .modal-close-svg {
+.modal__close-btn:hover .modal__close-svg,
+.modal__close-btn:focus .modal__close-svg {
   fill: var(--accent-color);
 }
 
@@ -754,7 +787,7 @@ img {
 }
 
 .form {
-  margin: 40px;
+  padding: 40px;
 }
 
 .form__contact-details {
@@ -763,6 +796,7 @@ img {
   font-size: 20px;
   line-height: 1.15;
   text-align: center;
+  color: var(--title-color);
 }
 
 .form__field {
@@ -774,7 +808,7 @@ img {
   position: relative;
 }
 
-.form-label {
+.form__label {
   font-size: 12px;
   line-height: 1.66;
   letter-spacing: 0.01em;
@@ -879,42 +913,12 @@ img {
   background-color: var(--accent-color);
   background-origin: border-box;
 }
-.btn-form {
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-  color: var(--alt-text-color);
-  background-color: var(--accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
+
+.btn--animation {
+  transition: background-color 250ms var(--timing-function);
 }
 
-.btn-form:hover,
-.btn-form:focus {
+.btn--animation:hover,
+.btn--animation:focus {
   background-color: var(--form-btn-active);
-}
-
-.btn-footer {
-  position: relative;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  width: 200px;
-  height: 50px;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-  color: var(--alt-text-color);
-  background-color: var(--accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-}
-.btn-footer__icon {
-  position: absolute;
-  top: 50%;
-  right: 28px;
-  transform: translateY(-50%);
-  fill: var(--alt-icon-color);
 }
