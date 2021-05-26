@@ -52,8 +52,9 @@
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
-}
-.modal__close-btn:hover .modal__close-svg,
-.modal__close-btn:focus .modal__close-svg {
-  fill: var(--accent-color);
+
+  .modal__close-btn:hover &,
+  .modal__close-btn:focus & {
+    fill: var(--accent-color);
+  }
 }

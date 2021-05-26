@@ -5,13 +5,12 @@
   font-size: 26px;
   line-height: 1.19;
   color: var(--alt-title-color);
-}
 
-.logo:hover,
-.logo:focus {
-  color: var(--alt-title-color);
+  &:hover,
+  &:focus {
+    color: var(--alt-title-color);
+  }
 }
-
 .logo__span {
   color: var(--accent-color);
 }
@@ -21,9 +20,9 @@
   padding-top: 24px;
   padding-bottom: 24px;
   color: var(--logo-color);
-}
 
-.header__logo:hover,
-.header__logo:focus {
-  color: var(--logo-color);
+  &:hover,
+  &:focus {
+    color: var(--logo-color);
+  }
 }

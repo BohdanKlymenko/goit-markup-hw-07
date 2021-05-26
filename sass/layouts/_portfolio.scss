@@ -19,14 +19,13 @@
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
-  transition-delay: 0;
-}
 
-.card-set__link:hover,
-.card-set__link:focus {
-  display: block;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+  &:hover,
+  &:focus {
+    display: block;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
 }
 
 .card-set__product {
@@ -43,11 +42,11 @@
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
   transition: transform 250ms var(--timing-function);
-}
 
-.card-set__link:hover .card-set__overlay,
-.card-set__link:focus .card-set__overlay {
-  transform: translateY(0);
+  .card-set__link:hover &,
+  .card-set__link:focus & {
+    transform: translateY(0);
+  }
 }
 
 .card-set__text {
